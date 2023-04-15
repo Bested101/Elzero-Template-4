@@ -187,6 +187,11 @@ header input:focus::placeholder{
 .page > .content{
   padding: 20px;
 }
+@media (max-width:767px) {
+  body .page > .content{
+    padding: 10px;
+  }
+}
 .page > .content h1{
   margin-bottom:40px ;
   position: relative;
