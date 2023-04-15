@@ -731,8 +731,16 @@ header input:focus::placeholder{
   font-size: 15px;
 }
 .container .box.ten3 table tbody td{
-  background-color: white;
   padding: 15px;
+  position: relative;
+}
+.container .box.ten3 table tbody tr{
+  position: relative;
+  background-color: white;
+  transition: var(--main-transation);
+}
+.container .box.ten3 table tbody tr:hover{
+  background-color: #f9f9f9;
 }
 .container .box.ten3 table thead{
   background-color: #eee;
@@ -760,5 +768,5 @@ header input:focus::placeholder{
 @media (max-width:1170px){
   .page > .content > .container{
     grid-template-columns: 1fr;
-  
+  }
 }
