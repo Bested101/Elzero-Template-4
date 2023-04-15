@@ -522,6 +522,11 @@ header input:focus::placeholder{
 .container .box.ten2 .card .icon:hover{
   rotate: 5deg;
 }
+@media (max-width:767px){
+  .container .box.ten2 .card .button{
+    margin-inline: auto 7.5px;
+  }
+}
 .container .box.ten .content{
   display: flex;
   flex-direction: column;
