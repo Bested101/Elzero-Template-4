@@ -798,9 +798,13 @@ header input:focus::placeholder{
 @media (max-width:767px){
   .settings .container{
     grid-template-columns: 1fr;
+    gap: 15px;
   }
   .settings .set{
     padding:15px ;
+  }
+  .settings{
+    padding: 10px;
   }
 }
 .settings .set >p{
@@ -896,6 +900,7 @@ header input:focus::placeholder{
   border: none;
   font-size: 16px;
   padding: 0;
+  cursor: pointer;
 }
 .settings .set.three .card{
   display: flex;
@@ -964,6 +969,7 @@ header input:focus::placeholder{
   border-radius: 4px;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 .settings .set.five .content label:hover input{
   border-color: var(--blue-color);
@@ -1014,6 +1020,7 @@ header input:focus::placeholder{
   border: 2px solid var(--grey-color);
   transition: var(--main-transation);
   position: relative;
+  cursor: pointer;
 }
 .settings .set.six div.radio1 input::before{
   content: "";
@@ -1058,4 +1065,10 @@ header input:focus::placeholder{
 .settings .set.six div.radio2 label:has(input:checked){
   border-color: var(--blue-color);
   color: var(--blue-color);
+}
+@media (max-width:767px) {
+  .settings .set.six div.radio2{
+    flex-direction: column;
+    padding-left: 0;
+  }
 }
