@@ -104,7 +104,7 @@ main{
   transition:var(--main-transation);
 }
 .side-bar a:hover , .side-bar a.active{
-  background-color: #f6f6f6;
+  background-color: #f5f5f5;
 }
 @media (max-width: 767px){
   .side-bar {
@@ -224,6 +224,9 @@ header input:focus::placeholder{
   .page > .content > .container{
     gap: 12.5px;
   }
+  .page h1{
+    margin-bottom: 30px;
+  }
 }
 @media (max-width:1170px){
   .page > .content > .container{
@@ -231,7 +234,7 @@ header input:focus::placeholder{
   }
 }
 .page .container > .box , .set{
-  border-radius: 12px;
+  border-radius: 11px;
   background-color: white;
   overflow: hidden;
 }
@@ -244,6 +247,14 @@ header input:focus::placeholder{
   justify-content: space-between;
   position: relative;
   padding: 20px;
+}
+@media (max-width:767px){
+  .page .container .box:not(.box.one){
+    padding: 15px;
+  }
+  .page .container .box.one .head{
+    padding: 15px;
+  }
 }
 .page .container .box.one .head img{
   width: 200px;
@@ -798,7 +809,7 @@ header input:focus::placeholder{
 @media (max-width:767px){
   .settings .container{
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12.5px;
   }
   .settings .set{
     padding:15px ;
@@ -1241,9 +1252,9 @@ header input:focus::placeholder{
     margin-top: 20px;
   }
   .profile .box.skills{
-    margin-block: 20px;
+    margin-block: 15px;
     text-align: center;
-    padding-inline: 15px;
+    padding: 15px;
   }
   .profile .box.activity .card{
     text-align: center;
@@ -1259,7 +1270,7 @@ header input:focus::placeholder{
     margin-top: 7.6px;
   }
   .profile .box.activity{
-    padding-inline: 15px;
+    padding: 15px;
   }
 }
 .projects{
@@ -1339,6 +1350,7 @@ header input:focus::placeholder{
 @media (max-width:767px) {
   .projects{
     grid-template-columns: 1fr;
+    gap: 12.5px;
   }
   .projects .box .tags{
     align-items: flex-start;
@@ -1414,8 +1426,345 @@ header input:focus::placeholder{
 @media (max-width:767px) {
   .courses{
     grid-template-columns: 1fr;
+    gap: 12.5px;
   }
   .courses .box .text{
     padding-inline: 10px;
+  }
+}
+.friends{
+  display: grid;
+  grid-template-columns:repeat(auto-fill , minmax(300px , 1fr));
+  gap: 20px;
+}
+.friends .box{
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+}
+.friends .box .contact{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.friends .box .contact i{
+  font-size: 13px;
+  background-color: #eee;
+  border-radius: 50%;
+  padding: 10px;
+  color: #666;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.friends .box .contact i:hover{
+  background-color: var(--blue-color);
+  color: white;
+}
+.friends .box .head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #dcdcdc;
+}
+.friends .box .head p{
+  color: var(--grey-color);
+  margin-block: 5px 13px;
+  font-size: 13px;
+}
+.friends img{
+  max-width: 100px;
+  border-radius: 50%;
+  margin-block: 10px;
+}
+.friends .box .content{
+  padding-block:15px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #dcdcdc;
+  position: relative;
+}
+.friends .box .content i{
+  margin-right: 5px;
+}
+.friends .box .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding-top: 15px;
+  color: var(--grey-color);
+}
+.friends .box .info a{
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: var(--blue-color);
+  color: white;
+  border-radius: 6px;
+}
+.friends .box .info a:last-child{
+  background-color: var(--red-color);
+}
+.friends .box.vip .content::after{
+  position: absolute;
+  content: "VIP";
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+  font-size: 40px;
+  color: var(--orange-color);
+  opacity: .23;
+  font-weight: bold;
+}
+@media (max-width:767px) {
+  .friends{
+    grid-template-columns: 1fr;
+    gap: 12.5px;
+  }
+  .friends .box{
+    padding: 15px;
+  }
+}
+.filepage{
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.files{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
+  gap: 20px;
+  flex: 1;
+}
+.files .box{
+  padding: 10px;
+  background-color: white;
+  color: var(--grey-color);
+  border-radius: 9px;
+  font-size: 13px;
+}
+.files .box:hover img{
+  rotate: 5deg;
+}
+.files .box .head img{
+  width: 64px;
+  display: block;
+  margin-inline: auto;
+  transition: var(--main-transation);
+}
+.files .box .icon i{
+  cursor: pointer;
+  font-size: 15px;
+}
+.files .box .head{
+  padding-bottom: 13px;
+  border-bottom: 1px solid #ededed;
+}
+.files .box .head span:first-of-type{
+  display: block;
+  margin:15px auto 10px ;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+}
+.files .box .info{
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.upload{
+  min-width: 260px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 13px;
+}
+.upload h2{
+  font-size: 24px;
+}
+.upload .card{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid #ededed;
+  color: var(--grey-color);
+}
+.upload .card .info{
+  margin-right: auto;
+}
+.upload .card .info span:first-child{
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+}
+.upload .card .icon{
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  font-size: 16px;
+  place-items: center;
+  background-color: rgba(0 117 255 / 20%);
+  color: var(--blue-color);
+  margin-right: 10px;
+}
+.upload .card.green .icon{
+  color: var(--green-color);
+  background-color: rgba(34 197 94 / 20%);
+}
+.upload .card.red .icon{
+  color: var(--red-color);
+  background-color: rgb(244 67 54 / 20%);
+}
+.upload .card.orange .icon{
+  color: var(--orange-color);
+  background-color:rgb(245 158 11 / 20%);
+}
+.upload .upload-btn{
+  background-color: var(--blue-color);
+  padding: 10px 15px;
+  border-radius: 6px;
+  width: fit-content;
+  margin: 15px auto 0;
+  color: white;
+  transition: .3s;
+  cursor: pointer;
+}
+.upload .upload-btn i{
+  margin-right: 10px;
+}
+.upload .upload-btn:hover{
+  background-color: var(--blue-alt-color);
+}
+.upload .upload-btn:hover i{
+  animation: pop .4s infinite alternate;
+}
+@keyframes pop {
+  100%{
+    transform: translateY(-5px);
+  }
+}
+@media (max-width:767px) {
+  .filepage{
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .files , .upload{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: 12.5px;
+  }
+  .upload h2{
+    text-align: center;
+  }
+  .upload{
+    padding: 15px;
+  }
+}
+.plans{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(450px , 1fr));
+  gap: 20px;
+}
+.plans .plan{
+  background-color: white;
+  padding: 20px;
+}
+.plans .plan .head{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--green-color);
+  color: white;
+  padding: 20px;
+  border: 3px solid white;
+  outline: 3px solid var(--green-color);
+  margin-bottom: 25px;
+}
+.plans .plan .head .price span{
+  font-size: 40px;
+}
+.plans .plan .head .price::before{
+  content: "$";
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: -17.5px;
+}
+.plans .plan li{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 15px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.plans .plan li.yes::before{
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--green-color);
+  font-size: 18px;
+  margin-right: 5px;
+  display: inline-block;
+  width: 22.5px;
+  text-align: center;
+}
+.plans .plan li.no::before{
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--red-color);
+  font-size: 18px;
+  margin-right: 5px;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+.plans .plan li:after{
+  content: "\f05a";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--grey-color);
+  margin-left: auto;
+  cursor: pointer;
+}
+.plans .plan a{
+  padding: 4px 10px;
+  color: white;
+  border-radius: 6px;
+  background-color: var(--green-color);
+  display: block;
+  margin-top: 7.5px;
+  width: fit-content;
+}
+.plans .plan:nth-child(2) a{
+  background-color: var(--blue-color);
+}
+.plans .plan:nth-child(2) .head{
+  background-color: var(--blue-color);
+  outline-color: var(--blue-color);
+}
+.plans .plan:nth-child(3) .head{
+  background-color: var(--orange-color);
+  outline-color: var(--orange-color);
+}
+.plans .plan:nth-child(3) p{
+  text-align: center;
+  color: var(--grey-color);
+  margin-top: 7.5px;
+}
+@media (max-width:767px) {
+  .plans{
+    grid-template-columns:1fr ;
+    gap: 15px;
+  }
+  .plans .plan{
+    padding: 15px;
   }
 }
